@@ -9,8 +9,10 @@ const colorList = {
 }
 
 const body = document.querySelector('body');
+const h1 = document.querySelector('h1');
 
 function handleColor(e) {
   const pressedButton = e.target.classList[0];
   body.style.backgroundColor = colorList[pressedButton]
+  h1.style.color = "#fff"
 }
