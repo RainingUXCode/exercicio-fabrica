@@ -1,0 +1,37 @@
+.buttons {
+  display: inline-flex;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  justify-content: center;
+}
+
+.buttons .twitter:hover,
+.buttons .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+@keyframes bg-pos {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes overflow-toggle {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
