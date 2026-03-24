@@ -1,37 +1,79 @@
+h1 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+  padding-top: 100px;
+  transition: color 0.4s ease;
+}
+
+.buttons:hover ~ h1 {
+  color: white;
+}
+
 .buttons {
-  display: inline-flex;
-  height: 120px;
+  display: flex;
   width: 100%;
   padding-top: 40px;
   justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.buttons .twitter:hover,
-.buttons .twitter:hover .tooltip::before {
-  background: #1da1f2;
+.buttons button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: #eee;
+  transition: color 0.4s;
+  z-index: 1;
+}
+
+.buttons button::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.buttons button:hover::before {
+  top: 0;
+}
+
+.buttons .btn1::before {
+  background: #bfb2dc;
+}
+.buttons .btn2::before {
+  background: #79ddb9;
+}
+.buttons .btn3::before {
+  background: #f3f19d;
+}
+.buttons .btn4::before {
+  background: #84cbea;
+}
+.buttons .btn5::before {
+  background: #faa4b8;
+}
+.buttons .btn6::before {
+  background: #1e68a5;
+}
+.buttons .btn7::before {
+  background: #dd5885;
+}
+
+.buttons button:hover {
   color: #fff;
-}
-
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-  background: #e4405f;
-  color: #fff;
-}
-
-@keyframes bg-pos {
-  0% {
-    top: 100%;
-  }
-  100% {
-    top: 0;
-  }
-}
-
-@keyframes overflow-toggle {
-  0% {
-    overflow: hidden;
-  }
-  100% {
-    overflow: visible;
-  }
 }
